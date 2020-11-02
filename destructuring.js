@@ -18,11 +18,12 @@ var carDetails = {
 // Do not edit the code above.
 
 /*
-  Use object destructuring to save the property values from the object carDetails into new variables. 
+  Use object destructuring to save the property values from the object carDetails into 
+  new variables. 
 */
 
 //Code Here
-
+var {color,make,model,year} = carDetails;
 
 
 ////////// PROBLEM 2 //////////
@@ -35,7 +36,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  var {firstName, lastName, title} = obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -55,8 +56,11 @@ function greeting( obj ) {
 
 //Code Here
 
-
-
+    const totalPopulation = (obj) => {
+    const {utah, california, texas, arizona} = obj;
+    const total = utah + california + texas + arizona;
+    return total
+    }
 ////////// PROBLEM 4 //////////
 
 /*
@@ -68,8 +72,15 @@ function greeting( obj ) {
 */
 
 //Code Here
+const ingredients = (obj) => {
+  const {carb,fat,protein} = obj;
+var arr=[];
 
-
+arr.push(carb);
+arr.push(fat);
+arr.push(protein);
+return arr
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -86,10 +97,21 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function largeNumbers({first,second,third}){
+  if (first<second && first <third )
+  {
+     return first
+}
+   else if (second<first && second<third)
+  {
+    return second
+  }
+else
+return third }
 
 
 ////////// PROBLEM 6 //////////
+
 
 /*
   Write a function called numberGroups that will take a destructured object as it's parameter.
@@ -98,5 +120,17 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function numberGroups({a,b,c})
+{
+  if(a.length > b.length && a.length > c.length)
+  {
+    return a
+  }
+  else if(b.length > a.length && b.length > c.length)
+  {
+    return b
+  }
+  else
+  return c
+}
 
