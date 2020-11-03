@@ -52,29 +52,23 @@ var employees = [
 
 //Code Here
 
-function employeeUpdater(){
-  employees.forEach(function(e,i,a)
-  {
-    
-    if(employee[i].firstName === "Theo")
-    {
-      
-        //employee.splice(i,1);
-        delete employees[i].firstName
-        delete employees[i].lastName
-       // return false;
+
+
+function employeeUpdater () {
+  for(let i = 0; i < employees.length; i++) {
+    if(employees[i].firstName === 'Theo') {
+      employees.splice(i, 1)
+    } else if(employees[i].firstName === 'Lorie') {
+      employees[i].department = 'HR'
     }
-    else if(e[i].firstName === "Lorie")
-    
-    {
-      employees[i].department = "HR"
-    }
-    
-  })
+  }
   return employees
-
-
 }
+
+
+
+
+
 
 ////////// PROBLEM 2 //////////
 
